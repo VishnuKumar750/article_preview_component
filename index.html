@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./index.css">
+  
+  <title>Frontend Mentor | Article preview component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+
+  <section>
+    <main class="main">
+      <div class="image_container">
+        <img class="content_image" src="images/drawers.jpg" alt="drawers"/>
+      </div>
+      <div class="content">
+        <div class="heading">
+          <h5 class="content_heading">Shift the overall look and feel by adding these wonderful 
+            touches to furniture in your home</h5>
+        </div>
+          <div class="para">
+            <p class="content_para">
+              Ever been in a room and felt like something was missing? Perhaps 
+      it felt slightly bare and uninviting. I’ve got some simple tips 
+      to help you make any room feel complete.
+            </p>
+          </div>
+  
+          <div class="share_bar">
+            <div class="user_profile">
+              <img class="user_img"
+              src="images/avatar-michelle.jpg" alt="michelle" >
+              <div class="user">
+                <h2 class="user_name">Michelle Appleton</h2>
+                <p class="user_date">28 Jun 2020</p>
+              </div>
+              <div 
+              
+              class="share-button share_icon " >
+                <img class="share_img" src="images/icon-share.svg" alt="share_icon" >
+              </div>
+            </div>
+            <div id="active" class="popup active-state">
+              <div class="popup-content">
+                <h3 class="share_h3">Share</h3>
+                <div class="icons_container">
+                  <img class="icons" src="images/icon-facebook.svg" alt="icon-facebook"/>
+                  <img class="icons" src="images/icon-twitter.svg" alt="icon-twitter"/>
+                  <img class="icons" src="images/icon-pinterest.svg" alt="icon-pinterest"/>
+                </div>
+                <div class="share-button  share-margin" >
+                  <img class="share_img_icon" src="images/icon-share.svg" alt="share_icon" >
+                </div>
+              </div>
+              
+              <div class="triangle"></div>
+            </div>
+          </div>
+        </div>
+    </main>
+  </section>
+
+  
+
+  
+
+  
+  
+
+  
+<!--   
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>. -->
+  </div>
+  <script>
+    const share_button = document.querySelectorAll('.share-button');
+    const share_icon = document.querySelector('.share_img')
+    const active_state = document.querySelector('.popup')
+    share_button.forEach((button) => {
+       button.addEventListener("click", () => {
+        active_state.classList.toggle('active-state')
+        share_button.classList.toggle('share_icon_active')
+        share_icon.classList.toggle('share_img_active');
+       })
+    })
+  </script>
+</body>
+</html>
